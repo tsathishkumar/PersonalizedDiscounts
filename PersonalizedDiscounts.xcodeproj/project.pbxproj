@@ -1,0 +1,428 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		822B28CB149914E3001A7DD1 /* MSScannerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 822B28CA149914E3001A7DD1 /* MSScannerController.m */; };
+		822B28CE149914FE001A7DD1 /* MSOverlayController.m in Sources */ = {isa = PBXBuildFile; fileRef = 822B28CD149914FE001A7DD1 /* MSOverlayController.m */; };
+		822B28D814991AC0001A7DD1 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 822B28D714991AC0001A7DD1 /* QuartzCore.framework */; };
+		822B28DC14991ADC001A7DD1 /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 822B28DB14991ADC001A7DD1 /* CoreVideo.framework */; };
+		822B28DE14991AEF001A7DD1 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 822B28DD14991AEF001A7DD1 /* CoreMedia.framework */; };
+		822B28E014991AFF001A7DD1 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 822B28DF14991AFF001A7DD1 /* AVFoundation.framework */; };
+		823E732515D3F55B0031AFC1 /* cancel.png in Resources */ = {isa = PBXBuildFile; fileRef = 823E732315D3F55B0031AFC1 /* cancel.png */; };
+		823E732615D3F55B0031AFC1 /* cancel@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 823E732415D3F55B0031AFC1 /* cancel@2x.png */; };
+		823E732A15D3F56F0031AFC1 /* MSActivityView.m in Sources */ = {isa = PBXBuildFile; fileRef = 823E732915D3F56F0031AFC1 /* MSActivityView.m */; };
+		826A832C160B781B00960B94 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 826A832B160B781B00960B94 /* Default-568h@2x.png */; };
+		82A1659C149907C200B8AEB4 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82A1659B149907C200B8AEB4 /* UIKit.framework */; };
+		82A1659E149907C200B8AEB4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82A1659D149907C200B8AEB4 /* Foundation.framework */; };
+		82A165A0149907C200B8AEB4 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82A1659F149907C200B8AEB4 /* CoreGraphics.framework */; };
+		82A165A6149907C200B8AEB4 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 82A165A4149907C200B8AEB4 /* InfoPlist.strings */; };
+		82A165A8149907C200B8AEB4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 82A165A7149907C200B8AEB4 /* main.m */; };
+		82A165AC149907C200B8AEB4 /* MSAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 82A165AB149907C200B8AEB4 /* MSAppDelegate.m */; };
+		82DEE69914991D97002BA5B0 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 82DEE69814991D97002BA5B0 /* Default.png */; };
+		82E7F44F151CC51700B1DC34 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 82E7F44E151CC51700B1DC34 /* RootViewController.m */; };
+		B87215C7164004AA006178EA /* libmoodstocks-sdk.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B87215B4164004AA006178EA /* libmoodstocks-sdk.a */; };
+		B87215C8164004AA006178EA /* MSApiSearch.m in Sources */ = {isa = PBXBuildFile; fileRef = B87215B8164004AA006178EA /* MSApiSearch.m */; };
+		B87215C9164004AA006178EA /* MSAvailability.m in Sources */ = {isa = PBXBuildFile; fileRef = B87215BA164004AA006178EA /* MSAvailability.m */; };
+		B87215CA164004AA006178EA /* MSImage.m in Sources */ = {isa = PBXBuildFile; fileRef = B87215BD164004AA006178EA /* MSImage.m */; };
+		B87215CB164004AA006178EA /* MSResult.m in Sources */ = {isa = PBXBuildFile; fileRef = B87215C0164004AA006178EA /* MSResult.m */; };
+		B87215CC164004AA006178EA /* MSScanner.m in Sources */ = {isa = PBXBuildFile; fileRef = B87215C2164004AA006178EA /* MSScanner.m */; };
+		B87215CD164004AA006178EA /* MSScannerSession.m in Sources */ = {isa = PBXBuildFile; fileRef = B87215C4164004AA006178EA /* MSScannerSession.m */; };
+		B87215CE164004AA006178EA /* MSSync.m in Sources */ = {isa = PBXBuildFile; fileRef = B87215C6164004AA006178EA /* MSSync.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		822B28C9149914E2001A7DD1 /* MSScannerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSScannerController.h; sourceTree = "<group>"; };
+		822B28CA149914E3001A7DD1 /* MSScannerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSScannerController.m; sourceTree = "<group>"; };
+		822B28CC149914FE001A7DD1 /* MSOverlayController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSOverlayController.h; sourceTree = "<group>"; };
+		822B28CD149914FE001A7DD1 /* MSOverlayController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSOverlayController.m; sourceTree = "<group>"; };
+		822B28D514991AAD001A7DD1 /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
+		822B28D714991AC0001A7DD1 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		822B28D914991ACF001A7DD1 /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
+		822B28DB14991ADC001A7DD1 /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
+		822B28DD14991AEF001A7DD1 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
+		822B28DF14991AFF001A7DD1 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		823E732315D3F55B0031AFC1 /* cancel.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cancel.png; sourceTree = "<group>"; };
+		823E732415D3F55B0031AFC1 /* cancel@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cancel@2x.png"; sourceTree = "<group>"; };
+		823E732815D3F56F0031AFC1 /* MSActivityView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSActivityView.h; sourceTree = "<group>"; };
+		823E732915D3F56F0031AFC1 /* MSActivityView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSActivityView.m; sourceTree = "<group>"; };
+		826A832B160B781B00960B94 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "../Default-568h@2x.png"; sourceTree = "<group>"; };
+		82A16597149907C200B8AEB4 /* PersonalizedDiscounts.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PersonalizedDiscounts.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		82A1659B149907C200B8AEB4 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		82A1659D149907C200B8AEB4 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		82A1659F149907C200B8AEB4 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		82A165A3149907C200B8AEB4 /* PersonalizedDiscounts-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "PersonalizedDiscounts-Info.plist"; sourceTree = "<group>"; };
+		82A165A5149907C200B8AEB4 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		82A165A7149907C200B8AEB4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		82A165A9149907C200B8AEB4 /* PersonalizedDiscounts-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PersonalizedDiscounts-Prefix.pch"; sourceTree = "<group>"; };
+		82A165AA149907C200B8AEB4 /* MSAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MSAppDelegate.h; sourceTree = "<group>"; };
+		82A165AB149907C200B8AEB4 /* MSAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MSAppDelegate.m; sourceTree = "<group>"; };
+		82DEE69814991D97002BA5B0 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		82E7F44D151CC51700B1DC34 /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
+		82E7F44E151CC51700B1DC34 /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
+		B87215B4164004AA006178EA /* libmoodstocks-sdk.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libmoodstocks-sdk.a"; sourceTree = "<group>"; };
+		B87215B5164004AA006178EA /* moodstocks_sdk.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = moodstocks_sdk.h; sourceTree = "<group>"; };
+		B87215B7164004AA006178EA /* MSApiSearch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSApiSearch.h; sourceTree = "<group>"; };
+		B87215B8164004AA006178EA /* MSApiSearch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSApiSearch.m; sourceTree = "<group>"; };
+		B87215B9164004AA006178EA /* MSAvailability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSAvailability.h; sourceTree = "<group>"; };
+		B87215BA164004AA006178EA /* MSAvailability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSAvailability.m; sourceTree = "<group>"; };
+		B87215BB164004AA006178EA /* MSDebug.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSDebug.h; sourceTree = "<group>"; };
+		B87215BC164004AA006178EA /* MSImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSImage.h; sourceTree = "<group>"; };
+		B87215BD164004AA006178EA /* MSImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSImage.m; sourceTree = "<group>"; };
+		B87215BE164004AA006178EA /* MSObjC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSObjC.h; sourceTree = "<group>"; };
+		B87215BF164004AA006178EA /* MSResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSResult.h; sourceTree = "<group>"; };
+		B87215C0164004AA006178EA /* MSResult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSResult.m; sourceTree = "<group>"; };
+		B87215C1164004AA006178EA /* MSScanner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSScanner.h; sourceTree = "<group>"; };
+		B87215C2164004AA006178EA /* MSScanner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSScanner.m; sourceTree = "<group>"; };
+		B87215C3164004AA006178EA /* MSScannerSession.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSScannerSession.h; sourceTree = "<group>"; };
+		B87215C4164004AA006178EA /* MSScannerSession.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSScannerSession.m; sourceTree = "<group>"; };
+		B87215C5164004AA006178EA /* MSSync.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSSync.h; sourceTree = "<group>"; };
+		B87215C6164004AA006178EA /* MSSync.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSSync.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		82A16594149907C100B8AEB4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				822B28E014991AFF001A7DD1 /* AVFoundation.framework in Frameworks */,
+				822B28DE14991AEF001A7DD1 /* CoreMedia.framework in Frameworks */,
+				822B28DC14991ADC001A7DD1 /* CoreVideo.framework in Frameworks */,
+				822B28D814991AC0001A7DD1 /* QuartzCore.framework in Frameworks */,
+				82A1659C149907C200B8AEB4 /* UIKit.framework in Frameworks */,
+				82A1659E149907C200B8AEB4 /* Foundation.framework in Frameworks */,
+				82A165A0149907C200B8AEB4 /* CoreGraphics.framework in Frameworks */,
+				B87215C7164004AA006178EA /* libmoodstocks-sdk.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		822B28CF149916B9001A7DD1 /* Scanner */ = {
+			isa = PBXGroup;
+			children = (
+				822B28C9149914E2001A7DD1 /* MSScannerController.h */,
+				822B28CA149914E3001A7DD1 /* MSScannerController.m */,
+			);
+			name = Scanner;
+			sourceTree = "<group>";
+		};
+		822B28D0149916C0001A7DD1 /* Overlay */ = {
+			isa = PBXGroup;
+			children = (
+				822B28CC149914FE001A7DD1 /* MSOverlayController.h */,
+				822B28CD149914FE001A7DD1 /* MSOverlayController.m */,
+			);
+			name = Overlay;
+			sourceTree = "<group>";
+		};
+		823E732715D3F5610031AFC1 /* Activity Indicator */ = {
+			isa = PBXGroup;
+			children = (
+				823E732815D3F56F0031AFC1 /* MSActivityView.h */,
+				823E732915D3F56F0031AFC1 /* MSActivityView.m */,
+			);
+			name = "Activity Indicator";
+			sourceTree = "<group>";
+		};
+		82A1658C149907C100B8AEB4 = {
+			isa = PBXGroup;
+			children = (
+				B87215B216400488006178EA /* MoodstocksSDK */,
+				82A165A1149907C200B8AEB4 /* PersonalizedDiscounts */,
+				82A1659A149907C200B8AEB4 /* Frameworks */,
+				82A16598149907C200B8AEB4 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		82A16598149907C200B8AEB4 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				82A16597149907C200B8AEB4 /* PersonalizedDiscounts.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		82A1659A149907C200B8AEB4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				822B28D514991AAD001A7DD1 /* ImageIO.framework */,
+				822B28D714991AC0001A7DD1 /* QuartzCore.framework */,
+				822B28D914991ACF001A7DD1 /* Accelerate.framework */,
+				822B28DB14991ADC001A7DD1 /* CoreVideo.framework */,
+				822B28DD14991AEF001A7DD1 /* CoreMedia.framework */,
+				822B28DF14991AFF001A7DD1 /* AVFoundation.framework */,
+				82A1659B149907C200B8AEB4 /* UIKit.framework */,
+				82A1659D149907C200B8AEB4 /* Foundation.framework */,
+				82A1659F149907C200B8AEB4 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		82A165A1149907C200B8AEB4 /* PersonalizedDiscounts */ = {
+			isa = PBXGroup;
+			children = (
+				823E732715D3F5610031AFC1 /* Activity Indicator */,
+				822B28CF149916B9001A7DD1 /* Scanner */,
+				822B28D0149916C0001A7DD1 /* Overlay */,
+				82A165AA149907C200B8AEB4 /* MSAppDelegate.h */,
+				82A165AB149907C200B8AEB4 /* MSAppDelegate.m */,
+				82A165A2149907C200B8AEB4 /* Supporting Files */,
+				82E7F44D151CC51700B1DC34 /* RootViewController.h */,
+				82E7F44E151CC51700B1DC34 /* RootViewController.m */,
+			);
+			name = PersonalizedDiscounts;
+			path = Demo;
+			sourceTree = "<group>";
+		};
+		82A165A2149907C200B8AEB4 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				823E732315D3F55B0031AFC1 /* cancel.png */,
+				823E732415D3F55B0031AFC1 /* cancel@2x.png */,
+				826A832B160B781B00960B94 /* Default-568h@2x.png */,
+				82DEE69814991D97002BA5B0 /* Default.png */,
+				82A165A3149907C200B8AEB4 /* PersonalizedDiscounts-Info.plist */,
+				82A165A4149907C200B8AEB4 /* InfoPlist.strings */,
+				82A165A7149907C200B8AEB4 /* main.m */,
+				82A165A9149907C200B8AEB4 /* PersonalizedDiscounts-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		B87215B216400488006178EA /* MoodstocksSDK */ = {
+			isa = PBXGroup;
+			children = (
+				B87215B4164004AA006178EA /* libmoodstocks-sdk.a */,
+				B87215B5164004AA006178EA /* moodstocks_sdk.h */,
+				B87215B6164004AA006178EA /* Obj-C */,
+			);
+			name = MoodstocksSDK;
+			sourceTree = "<group>";
+		};
+		B87215B6164004AA006178EA /* Obj-C */ = {
+			isa = PBXGroup;
+			children = (
+				B87215B7164004AA006178EA /* MSApiSearch.h */,
+				B87215B8164004AA006178EA /* MSApiSearch.m */,
+				B87215B9164004AA006178EA /* MSAvailability.h */,
+				B87215BA164004AA006178EA /* MSAvailability.m */,
+				B87215BB164004AA006178EA /* MSDebug.h */,
+				B87215BC164004AA006178EA /* MSImage.h */,
+				B87215BD164004AA006178EA /* MSImage.m */,
+				B87215BE164004AA006178EA /* MSObjC.h */,
+				B87215BF164004AA006178EA /* MSResult.h */,
+				B87215C0164004AA006178EA /* MSResult.m */,
+				B87215C1164004AA006178EA /* MSScanner.h */,
+				B87215C2164004AA006178EA /* MSScanner.m */,
+				B87215C3164004AA006178EA /* MSScannerSession.h */,
+				B87215C4164004AA006178EA /* MSScannerSession.m */,
+				B87215C5164004AA006178EA /* MSSync.h */,
+				B87215C6164004AA006178EA /* MSSync.m */,
+			);
+			path = "Obj-C";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		82A16596149907C100B8AEB4 /* PersonalizedDiscounts */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 82A165AF149907C200B8AEB4 /* Build configuration list for PBXNativeTarget "PersonalizedDiscounts" */;
+			buildPhases = (
+				82A16593149907C100B8AEB4 /* Sources */,
+				82A16594149907C100B8AEB4 /* Frameworks */,
+				82A16595149907C100B8AEB4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PersonalizedDiscounts;
+			productName = Demo;
+			productReference = 82A16597149907C200B8AEB4 /* PersonalizedDiscounts.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		82A1658E149907C100B8AEB4 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0420;
+				ORGANIZATIONNAME = Moodstocks;
+			};
+			buildConfigurationList = 82A16591149907C100B8AEB4 /* Build configuration list for PBXProject "PersonalizedDiscounts" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 82A1658C149907C100B8AEB4;
+			productRefGroup = 82A16598149907C200B8AEB4 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				82A16596149907C100B8AEB4 /* PersonalizedDiscounts */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		82A16595149907C100B8AEB4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				82A165A6149907C200B8AEB4 /* InfoPlist.strings in Resources */,
+				82DEE69914991D97002BA5B0 /* Default.png in Resources */,
+				823E732515D3F55B0031AFC1 /* cancel.png in Resources */,
+				823E732615D3F55B0031AFC1 /* cancel@2x.png in Resources */,
+				826A832C160B781B00960B94 /* Default-568h@2x.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		82A16593149907C100B8AEB4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				82A165A8149907C200B8AEB4 /* main.m in Sources */,
+				82A165AC149907C200B8AEB4 /* MSAppDelegate.m in Sources */,
+				822B28CB149914E3001A7DD1 /* MSScannerController.m in Sources */,
+				822B28CE149914FE001A7DD1 /* MSOverlayController.m in Sources */,
+				82E7F44F151CC51700B1DC34 /* RootViewController.m in Sources */,
+				823E732A15D3F56F0031AFC1 /* MSActivityView.m in Sources */,
+				B87215C8164004AA006178EA /* MSApiSearch.m in Sources */,
+				B87215C9164004AA006178EA /* MSAvailability.m in Sources */,
+				B87215CA164004AA006178EA /* MSImage.m in Sources */,
+				B87215CB164004AA006178EA /* MSResult.m in Sources */,
+				B87215CC164004AA006178EA /* MSScanner.m in Sources */,
+				B87215CD164004AA006178EA /* MSScannerSession.m in Sources */,
+				B87215CE164004AA006178EA /* MSSync.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		82A165A4149907C200B8AEB4 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				82A165A5149907C200B8AEB4 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		82A165AD149907C200B8AEB4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		82A165AE149907C200B8AEB4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		82A165B0149907C200B8AEB4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Demo/PersonalizedDiscounts-Prefix.pch";
+				INFOPLIST_FILE = "Demo/PersonalizedDiscounts-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/Demo\"",
+					"\"$(SRCROOT)\"",
+				);
+				PRODUCT_NAME = PersonalizedDiscounts;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		82A165B1149907C200B8AEB4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Demo/PersonalizedDiscounts-Prefix.pch";
+				INFOPLIST_FILE = "Demo/PersonalizedDiscounts-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/Demo\"",
+					"\"$(SRCROOT)\"",
+				);
+				PRODUCT_NAME = PersonalizedDiscounts;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		82A16591149907C100B8AEB4 /* Build configuration list for PBXProject "PersonalizedDiscounts" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				82A165AD149907C200B8AEB4 /* Debug */,
+				82A165AE149907C200B8AEB4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		82A165AF149907C200B8AEB4 /* Build configuration list for PBXNativeTarget "PersonalizedDiscounts" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				82A165B0149907C200B8AEB4 /* Debug */,
+				82A165B1149907C200B8AEB4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 82A1658E149907C100B8AEB4 /* Project object */;
+}
