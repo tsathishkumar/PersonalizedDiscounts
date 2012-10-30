@@ -33,6 +33,7 @@
 		B87215CC164004AA006178EA /* MSScanner.m in Sources */ = {isa = PBXBuildFile; fileRef = B87215C2164004AA006178EA /* MSScanner.m */; };
 		B87215CD164004AA006178EA /* MSScannerSession.m in Sources */ = {isa = PBXBuildFile; fileRef = B87215C4164004AA006178EA /* MSScannerSession.m */; };
 		B87215CE164004AA006178EA /* MSSync.m in Sources */ = {isa = PBXBuildFile; fileRef = B87215C6164004AA006178EA /* MSSync.m */; };
+		B87FA7A216401FA1001CCB8F /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B87FA7A116401FA1001CCB8F /* FacebookSDK.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -82,6 +83,7 @@
 		B87215C4164004AA006178EA /* MSScannerSession.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSScannerSession.m; sourceTree = "<group>"; };
 		B87215C5164004AA006178EA /* MSSync.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSSync.h; sourceTree = "<group>"; };
 		B87215C6164004AA006178EA /* MSSync.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSSync.m; sourceTree = "<group>"; };
+		B87FA7A116401FA1001CCB8F /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FacebookSDK.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +99,7 @@
 				82A1659E149907C200B8AEB4 /* Foundation.framework in Frameworks */,
 				82A165A0149907C200B8AEB4 /* CoreGraphics.framework in Frameworks */,
 				B87215C7164004AA006178EA /* libmoodstocks-sdk.a in Frameworks */,
+				B87FA7A216401FA1001CCB8F /* FacebookSDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -151,6 +154,7 @@
 		82A1659A149907C200B8AEB4 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				B87FA7A116401FA1001CCB8F /* FacebookSDK.framework */,
 				822B28D514991AAD001A7DD1 /* ImageIO.framework */,
 				822B28D714991AC0001A7DD1 /* QuartzCore.framework */,
 				822B28D914991ACF001A7DD1 /* Accelerate.framework */,
@@ -370,6 +374,10 @@
 		82A165B0149907C200B8AEB4 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Demo/PersonalizedDiscounts-Prefix.pch";
 				INFOPLIST_FILE = "Demo/PersonalizedDiscounts-Info.plist";
@@ -387,6 +395,10 @@
 		82A165B1149907C200B8AEB4 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Demo/PersonalizedDiscounts-Prefix.pch";
 				INFOPLIST_FILE = "Demo/PersonalizedDiscounts-Info.plist";
