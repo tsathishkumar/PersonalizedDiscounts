@@ -25,7 +25,6 @@
 
 #import "MSDebug.h"
 #import "MSScanner.h"
-#import "RootViewController.h"
 #import "LoginViewController.h"
 #import <FacebookSDK/FacebookSDK.h>
 

@@ -16,6 +16,7 @@
 
 #import "LoginViewController.h"
 #import "MSAppDelegate.h"
+#import "MSScannerController.h"
 
 @interface LoginViewController ()
 
@@ -51,6 +52,17 @@
             }];
         }
     }
+    [self.scanButton addTarget:self action:@selector(scanAction) forControlEvents:UIControlEventTouchDown];
+}
+
+- (void)scanAction {
+    MSScannerController *scannerController = [[MSScannerController alloc] init];
+    UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:scannerController];
+    
+    [self presentModalViewController:navController animated:YES];
+    
+    [scannerController release];
+    [navController release];
 }
 
 // FBSample logic
@@ -60,16 +72,43 @@
     MSAppDelegate *appDelegate = [[UIApplication sharedApplication]delegate];
     if (appDelegate.session.isOpen) {
         // valid account UI is shown whenever the session is open
-        [self.authButton setTitle:@"Log out" forState:UIControlStateNormal];
+        [self.authButton setTitle:@"Log Out"];
+        [self.scanButton setHidden:NO];
     } else {
         // login-needed account UI is shown whenever the session is closed
-        [self.authButton setTitle:@"Log in" forState:UIControlStateNormal];
+        [self.authButton setTitle:@"Log In"];
+        [self.scanButton setHidden:YES];
     }
 }
 
-// FBSample logic
-// handler for button click, logs sessions in or out
-- (IBAction)loginPressed:(UIButton *)sender {
+#pragma mark Template generated code
+
+
+- (void)viewDidUnload
+{
+    [self setAuthButton:nil];
+    [self setScanButton:nil];
+    [super viewDidUnload];
+}
+
+- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
+{
+    // Return YES for supported orientations
+    if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {
+        return (interfaceOrientation != UIInterfaceOrientationPortraitUpsideDown);
+    } else {
+        return YES;
+    }
+}
+
+#pragma mark -
+
+- (void)dealloc {
+    [_authButton release];
+    [_scanButton release];
+    [super dealloc];
+}
+- (IBAction)loginPressed:(UIBarButtonItem *)sender {
     // get the app delegate so that we can access the session property
     MSAppDelegate *appDelegate = [[UIApplication sharedApplication]delegate];
     
@@ -95,25 +134,8 @@
             [self updateView];
         }];
     }
+
 }
-
-#pragma mark Template generated code
-
-- (void)viewDidUnload
-{
-    [super viewDidUnload];
+- (IBAction)scanPressed:(id)sender {
 }
-
-- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
-{
-    // Return YES for supported orientations
-    if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {
-        return (interfaceOrientation != UIInterfaceOrientationPortraitUpsideDown);
-    } else {
-        return YES;
-    }
-}
-
-#pragma mark -
-
 @end

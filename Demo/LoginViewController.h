@@ -10,7 +10,9 @@
 
 @interface LoginViewController : UIViewController
 
-- (IBAction)loginPressed:(UIButton *)sender;
-@property (retain, nonatomic) IBOutlet UIButton *authButton;
+@property (retain, nonatomic) IBOutlet UIBarButtonItem *authButton;
+- (IBAction)loginPressed:(UIBarButtonItem *)sender;
+@property (retain, nonatomic) IBOutlet UIButton *scanButton;
+- (IBAction)scanPressed:(id)sender;
 
 @end
