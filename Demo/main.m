@@ -13,6 +13,7 @@
 int main(int argc, char *argv[])
 {
     @autoreleasepool {
-        return UIApplicationMain(argc, argv, nil, NSStringFromClass([MSAppDelegate class]));
+        return UIApplicationMain(argc, argv, nil, @"MSAppDelegate");
+//                                 NSStringFromClass([MSAppDelegate class]));
     }
 }

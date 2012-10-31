@@ -26,8 +26,11 @@
 #import "MSDebug.h"
 #import "MSScanner.h"
 #import "RootViewController.h"
+#import "CredentialManager.h"
+
 
 @implementation MSAppDelegate
+
 
 @synthesize window = _window;
 @synthesize navigationController = _navigationController;
@@ -40,6 +43,21 @@
 }
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
+{
+    [CredentialManager authorize];
+    [self showWindow];
+    
+    MSDLog(@"\nSetting rootViewController");
+    RootViewController *rootViewController = [[[RootViewController alloc] init] autorelease];
+    self.navigationController = [[[UINavigationController alloc] initWithRootViewController:rootViewController] autorelease];
+    [self.window addSubview:self.navigationController.view];
+    //    }
+    
+    [self.window makeKeyAndVisible];
+    return YES;
+}
+
+- (void) showWindow
 {
     self.window = [[[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]] autorelease];
 //    
@@ -88,14 +106,6 @@
             }
         }
 #endif
-        
-        RootViewController *rootViewController = [[[RootViewController alloc] init] autorelease];
-        self.navigationController = [[[UINavigationController alloc] initWithRootViewController:rootViewController] autorelease];
-        [self.window addSubview:self.navigationController.view];
-//    }
-    
-    [self.window makeKeyAndVisible];
-    return YES;
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application

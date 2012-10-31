@@ -12,7 +12,7 @@
 		822B28D814991AC0001A7DD1 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 822B28D714991AC0001A7DD1 /* QuartzCore.framework */; };
 		822B28DC14991ADC001A7DD1 /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 822B28DB14991ADC001A7DD1 /* CoreVideo.framework */; };
 		822B28DE14991AEF001A7DD1 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 822B28DD14991AEF001A7DD1 /* CoreMedia.framework */; };
-		822B28E014991AFF001A7DD1 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 822B28DF14991AFF001A7DD1 /* AVFoundation.framework */; };
+		822B28E014991AFF001A7DD1 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 822B28DF14991AFF001A7DD1 /* AVFoundation.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		823E732515D3F55B0031AFC1 /* cancel.png in Resources */ = {isa = PBXBuildFile; fileRef = 823E732315D3F55B0031AFC1 /* cancel.png */; };
 		823E732615D3F55B0031AFC1 /* cancel@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 823E732415D3F55B0031AFC1 /* cancel@2x.png */; };
 		823E732A15D3F56F0031AFC1 /* MSActivityView.m in Sources */ = {isa = PBXBuildFile; fileRef = 823E732915D3F56F0031AFC1 /* MSActivityView.m */; };
@@ -34,6 +34,10 @@
 		B87215CD164004AA006178EA /* MSScannerSession.m in Sources */ = {isa = PBXBuildFile; fileRef = B87215C4164004AA006178EA /* MSScannerSession.m */; };
 		B87215CE164004AA006178EA /* MSSync.m in Sources */ = {isa = PBXBuildFile; fileRef = B87215C6164004AA006178EA /* MSSync.m */; };
 		B87FA7A216401FA1001CCB8F /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B87FA7A116401FA1001CCB8F /* FacebookSDK.framework */; };
+		B87FA7A6164020AF001CCB8F /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B87FA7A4164020AF001CCB8F /* Accounts.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		B87FA7A7164020AF001CCB8F /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B87FA7A5164020AF001CCB8F /* AdSupport.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		B87FA7A9164020E4001CCB8F /* FacebookSDKResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = B87FA7A8164020E4001CCB8F /* FacebookSDKResources.bundle */; };
+		B87FA7B616403804001CCB8F /* CredentialManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B87FA7B516403804001CCB8F /* CredentialManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -84,6 +88,11 @@
 		B87215C5164004AA006178EA /* MSSync.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSSync.h; sourceTree = "<group>"; };
 		B87215C6164004AA006178EA /* MSSync.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSSync.m; sourceTree = "<group>"; };
 		B87FA7A116401FA1001CCB8F /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FacebookSDK.framework; sourceTree = "<group>"; };
+		B87FA7A4164020AF001CCB8F /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
+		B87FA7A5164020AF001CCB8F /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
+		B87FA7A8164020E4001CCB8F /* FacebookSDKResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = FacebookSDKResources.bundle; sourceTree = "<group>"; };
+		B87FA7B416403804001CCB8F /* CredentialManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CredentialManager.h; sourceTree = "<group>"; };
+		B87FA7B516403804001CCB8F /* CredentialManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CredentialManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +100,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B87FA7A6164020AF001CCB8F /* Accounts.framework in Frameworks */,
+				B87FA7A7164020AF001CCB8F /* AdSupport.framework in Frameworks */,
 				822B28E014991AFF001A7DD1 /* AVFoundation.framework in Frameworks */,
 				822B28DE14991AEF001A7DD1 /* CoreMedia.framework in Frameworks */,
 				822B28DC14991ADC001A7DD1 /* CoreVideo.framework in Frameworks */,
@@ -154,6 +165,9 @@
 		82A1659A149907C200B8AEB4 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				B87FA7A8164020E4001CCB8F /* FacebookSDKResources.bundle */,
+				B87FA7A4164020AF001CCB8F /* Accounts.framework */,
+				B87FA7A5164020AF001CCB8F /* AdSupport.framework */,
 				B87FA7A116401FA1001CCB8F /* FacebookSDK.framework */,
 				822B28D514991AAD001A7DD1 /* ImageIO.framework */,
 				822B28D714991AC0001A7DD1 /* QuartzCore.framework */,
@@ -171,6 +185,7 @@
 		82A165A1149907C200B8AEB4 /* PersonalizedDiscounts */ = {
 			isa = PBXGroup;
 			children = (
+				B87FA7B3164037D8001CCB8F /* CredentialManager */,
 				823E732715D3F5610031AFC1 /* Activity Indicator */,
 				822B28CF149916B9001A7DD1 /* Scanner */,
 				822B28D0149916C0001A7DD1 /* Overlay */,
@@ -232,6 +247,15 @@
 			path = "Obj-C";
 			sourceTree = "<group>";
 		};
+		B87FA7B3164037D8001CCB8F /* CredentialManager */ = {
+			isa = PBXGroup;
+			children = (
+				B87FA7B416403804001CCB8F /* CredentialManager.h */,
+				B87FA7B516403804001CCB8F /* CredentialManager.m */,
+			);
+			name = CredentialManager;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -288,6 +312,7 @@
 				823E732515D3F55B0031AFC1 /* cancel.png in Resources */,
 				823E732615D3F55B0031AFC1 /* cancel@2x.png in Resources */,
 				826A832C160B781B00960B94 /* Default-568h@2x.png in Resources */,
+				B87FA7A9164020E4001CCB8F /* FacebookSDKResources.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -311,6 +336,7 @@
 				B87215CC164004AA006178EA /* MSScanner.m in Sources */,
 				B87215CD164004AA006178EA /* MSScannerSession.m in Sources */,
 				B87215CE164004AA006178EA /* MSSync.m in Sources */,
+				B87FA7B616403804001CCB8F /* CredentialManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -387,6 +413,7 @@
 					"\"$(SRCROOT)/Demo\"",
 					"\"$(SRCROOT)\"",
 				);
+				OTHER_LDFLAGS = "-lsqlite3.0";
 				PRODUCT_NAME = PersonalizedDiscounts;
 				WRAPPER_EXTENSION = app;
 			};
@@ -408,6 +435,7 @@
 					"\"$(SRCROOT)/Demo\"",
 					"\"$(SRCROOT)\"",
 				);
+				OTHER_LDFLAGS = "-lsqlite3.0";
 				PRODUCT_NAME = PersonalizedDiscounts;
 				WRAPPER_EXTENSION = app;
 			};
