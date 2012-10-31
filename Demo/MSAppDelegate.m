@@ -26,14 +26,15 @@
 #import "MSDebug.h"
 #import "MSScanner.h"
 #import "RootViewController.h"
-#import "CredentialManager.h"
-
+#import "LoginViewController.h"
+#import <FacebookSDK/FacebookSDK.h>
 
 @implementation MSAppDelegate
 
 
 @synthesize window = _window;
 @synthesize navigationController = _navigationController;
+@synthesize session = _session;
 
 - (void)dealloc
 {
@@ -42,17 +43,20 @@
     [super dealloc];
 }
 
+- (BOOL)application:(UIApplication *)application
+            openURL:(NSURL *)url
+  sourceApplication:(NSString *)sourceApplication
+         annotation:(id)annotation {
+    // attempt to extract a token from the url
+    return [self.session handleOpenURL:url];
+}
+
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    [CredentialManager authorize];
-    [self showWindow];
-    
-    MSDLog(@"\nSetting rootViewController");
-    RootViewController *rootViewController = [[[RootViewController alloc] init] autorelease];
-    self.navigationController = [[[UINavigationController alloc] initWithRootViewController:rootViewController] autorelease];
-    [self.window addSubview:self.navigationController.view];
-    //    }
-    
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    LoginViewController *rootViewController = [[[LoginViewController alloc] init] autorelease];
+
+    self.window.rootViewController = rootViewController;
     [self.window makeKeyAndVisible];
     return YES;
 }
@@ -136,6 +140,8 @@
     /*
      Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
      */
+    
+    [FBSession.activeSession handleDidBecomeActive];
 }
 
 - (void)applicationWillTerminate:(UIApplication *)application
@@ -145,6 +151,8 @@
      Save data if appropriate.
      See also applicationDidEnterBackground:.
      */
+    
+    [FBSession.activeSession close];
 }
 
 @end

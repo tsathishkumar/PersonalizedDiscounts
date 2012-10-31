@@ -22,6 +22,7 @@
  */
 
 #import <UIKit/UIKit.h>
+#import <FacebookSDK/FacebookSDK.h>
 
 @interface MSAppDelegate : UIResponder <UIApplicationDelegate> {
     UINavigationController *_navigationController;
@@ -29,5 +30,7 @@
 
 @property (strong, nonatomic) UIWindow *window;
 @property (nonatomic, retain) UINavigationController *navigationController;
+
+@property (strong, nonatomic) FBSession *session;
 
 @end

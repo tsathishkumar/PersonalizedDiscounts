@@ -37,7 +37,8 @@
 		B87FA7A6164020AF001CCB8F /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B87FA7A4164020AF001CCB8F /* Accounts.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		B87FA7A7164020AF001CCB8F /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B87FA7A5164020AF001CCB8F /* AdSupport.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		B87FA7A9164020E4001CCB8F /* FacebookSDKResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = B87FA7A8164020E4001CCB8F /* FacebookSDKResources.bundle */; };
-		B87FA7B616403804001CCB8F /* CredentialManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B87FA7B516403804001CCB8F /* CredentialManager.m */; };
+		B87FA7C516410253001CCB8F /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B87FA7C316410253001CCB8F /* LoginViewController.m */; };
+		B87FA7C616410253001CCB8F /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B87FA7C416410253001CCB8F /* LoginViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -91,8 +92,9 @@
 		B87FA7A4164020AF001CCB8F /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
 		B87FA7A5164020AF001CCB8F /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
 		B87FA7A8164020E4001CCB8F /* FacebookSDKResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = FacebookSDKResources.bundle; sourceTree = "<group>"; };
-		B87FA7B416403804001CCB8F /* CredentialManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CredentialManager.h; sourceTree = "<group>"; };
-		B87FA7B516403804001CCB8F /* CredentialManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CredentialManager.m; sourceTree = "<group>"; };
+		B87FA7C216410253001CCB8F /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		B87FA7C316410253001CCB8F /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		B87FA7C416410253001CCB8F /* LoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -185,7 +187,6 @@
 		82A165A1149907C200B8AEB4 /* PersonalizedDiscounts */ = {
 			isa = PBXGroup;
 			children = (
-				B87FA7B3164037D8001CCB8F /* CredentialManager */,
 				823E732715D3F5610031AFC1 /* Activity Indicator */,
 				822B28CF149916B9001A7DD1 /* Scanner */,
 				822B28D0149916C0001A7DD1 /* Overlay */,
@@ -194,6 +195,9 @@
 				82A165A2149907C200B8AEB4 /* Supporting Files */,
 				82E7F44D151CC51700B1DC34 /* RootViewController.h */,
 				82E7F44E151CC51700B1DC34 /* RootViewController.m */,
+				B87FA7C216410253001CCB8F /* LoginViewController.h */,
+				B87FA7C316410253001CCB8F /* LoginViewController.m */,
+				B87FA7C416410253001CCB8F /* LoginViewController.xib */,
 			);
 			name = PersonalizedDiscounts;
 			path = Demo;
@@ -245,15 +249,6 @@
 				B87215C6164004AA006178EA /* MSSync.m */,
 			);
 			path = "Obj-C";
-			sourceTree = "<group>";
-		};
-		B87FA7B3164037D8001CCB8F /* CredentialManager */ = {
-			isa = PBXGroup;
-			children = (
-				B87FA7B416403804001CCB8F /* CredentialManager.h */,
-				B87FA7B516403804001CCB8F /* CredentialManager.m */,
-			);
-			name = CredentialManager;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -313,6 +308,7 @@
 				823E732615D3F55B0031AFC1 /* cancel@2x.png in Resources */,
 				826A832C160B781B00960B94 /* Default-568h@2x.png in Resources */,
 				B87FA7A9164020E4001CCB8F /* FacebookSDKResources.bundle in Resources */,
+				B87FA7C616410253001CCB8F /* LoginViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -336,7 +332,7 @@
 				B87215CC164004AA006178EA /* MSScanner.m in Sources */,
 				B87215CD164004AA006178EA /* MSScannerSession.m in Sources */,
 				B87215CE164004AA006178EA /* MSSync.m in Sources */,
-				B87FA7B616403804001CCB8F /* CredentialManager.m in Sources */,
+				B87FA7C516410253001CCB8F /* LoginViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
