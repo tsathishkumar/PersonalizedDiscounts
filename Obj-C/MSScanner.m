@@ -37,8 +37,8 @@ static NSString *kMSDBFilename = @"ms.db";
 // -------------------------------------------------
 // Moodstocks API key/secret pair
 // -------------------------------------------------
-static NSString *kMSAPIKey     = @"ApIkEy";
-static NSString *kMSAPISecret  = @"ApIsEcReT";
+static NSString *kMSAPIKey     = @"9kYxSDgOhWoMLoV8RlbZ";
+static NSString *kMSAPISecret  = @"no1E8LOeJJUbK65m";
 
 // Flag to control the scanner behavior when the app switches between
 // foreground and background
