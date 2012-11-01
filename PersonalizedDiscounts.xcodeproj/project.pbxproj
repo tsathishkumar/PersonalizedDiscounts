@@ -38,13 +38,14 @@
 		B87FA7A9164020E4001CCB8F /* FacebookSDKResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = B87FA7A8164020E4001CCB8F /* FacebookSDKResources.bundle */; };
 		B87FA7C516410253001CCB8F /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B87FA7C316410253001CCB8F /* LoginViewController.m */; };
 		B87FA7C616410253001CCB8F /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B87FA7C416410253001CCB8F /* LoginViewController.xib */; };
+		B8C7D5CA164240D700D275D3 /* ic_launcher.png in Resources */ = {isa = PBXBuildFile; fileRef = B8C7D5C9164240D700D275D3 /* ic_launcher.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		822B28C9149914E2001A7DD1 /* MSScannerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSScannerController.h; sourceTree = "<group>"; };
 		822B28CA149914E3001A7DD1 /* MSScannerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSScannerController.m; sourceTree = "<group>"; };
 		822B28CC149914FE001A7DD1 /* MSOverlayController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSOverlayController.h; sourceTree = "<group>"; };
-		822B28CD149914FE001A7DD1 /* MSOverlayController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSOverlayController.m; sourceTree = "<group>"; };
+		822B28CD149914FE001A7DD1 /* MSOverlayController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSOverlayController.m; sourceTree = "<group>"; usesTabs = 0; };
 		822B28D514991AAD001A7DD1 /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
 		822B28D714991AC0001A7DD1 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		822B28D914991ACF001A7DD1 /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
@@ -92,6 +93,7 @@
 		B87FA7C216410253001CCB8F /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		B87FA7C316410253001CCB8F /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		B87FA7C416410253001CCB8F /* LoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
+		B8C7D5C9164240D700D275D3 /* ic_launcher.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_launcher.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -146,6 +148,7 @@
 		82A1658C149907C100B8AEB4 = {
 			isa = PBXGroup;
 			children = (
+				B8C7D5C9164240D700D275D3 /* ic_launcher.png */,
 				B87215B216400488006178EA /* MoodstocksSDK */,
 				82A165A1149907C200B8AEB4 /* PersonalizedDiscounts */,
 				82A1659A149907C200B8AEB4 /* Frameworks */,
@@ -194,8 +197,7 @@
 				B87FA7C316410253001CCB8F /* LoginViewController.m */,
 				B87FA7C416410253001CCB8F /* LoginViewController.xib */,
 			);
-			name = PersonalizedDiscounts;
-			path = Demo;
+			path = PersonalizedDiscounts;
 			sourceTree = "<group>";
 		};
 		82A165A2149907C200B8AEB4 /* Supporting Files */ = {
@@ -262,7 +264,7 @@
 			dependencies = (
 			);
 			name = PersonalizedDiscounts;
-			productName = Demo;
+			productName = PersonalizedDiscounts;
 			productReference = 82A16597149907C200B8AEB4 /* PersonalizedDiscounts.app */;
 			productType = "com.apple.product-type.application";
 		};
@@ -304,6 +306,7 @@
 				826A832C160B781B00960B94 /* Default-568h@2x.png in Resources */,
 				B87FA7A9164020E4001CCB8F /* FacebookSDKResources.bundle in Resources */,
 				B87FA7C616410253001CCB8F /* LoginViewController.xib in Resources */,
+				B8C7D5CA164240D700D275D3 /* ic_launcher.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -395,12 +398,12 @@
 					"\"$(SRCROOT)\"",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Demo/PersonalizedDiscounts-Prefix.pch";
-				INFOPLIST_FILE = "Demo/PersonalizedDiscounts-Info.plist";
+				GCC_PREFIX_HEADER = "PersonalizedDiscounts/PersonalizedDiscounts-Prefix.pch";
+				INFOPLIST_FILE = "PersonalizedDiscounts/PersonalizedDiscounts-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)/Demo\"",
+					"\"$(SRCROOT)/PersonalizedDiscounts\"",
 					"\"$(SRCROOT)\"",
 				);
 				OTHER_LDFLAGS = "-lsqlite3.0";
@@ -417,12 +420,12 @@
 					"\"$(SRCROOT)\"",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Demo/PersonalizedDiscounts-Prefix.pch";
-				INFOPLIST_FILE = "Demo/PersonalizedDiscounts-Info.plist";
+				GCC_PREFIX_HEADER = "PersonalizedDiscounts/PersonalizedDiscounts-Prefix.pch";
+				INFOPLIST_FILE = "PersonalizedDiscounts/PersonalizedDiscounts-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)/Demo\"",
+					"\"$(SRCROOT)/PersonalizedDiscounts\"",
 					"\"$(SRCROOT)\"",
 				);
 				OTHER_LDFLAGS = "-lsqlite3.0";
