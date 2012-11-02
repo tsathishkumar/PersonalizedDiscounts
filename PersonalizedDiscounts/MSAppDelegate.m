@@ -57,12 +57,12 @@
 
     self.window.rootViewController = rootViewController;
     [self.window makeKeyAndVisible];
+    [self showCameraView];
     return YES;
 }
 
-- (void) showWindow
+- (void) showCameraView
 {
-    self.window = [[[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]] autorelease];
 //    
 //    if (!MSDeviceCompatibleWithSDK()) {
 //        // == DO NOT USE IN PRODUCTION AS IS: THIS IS TO ILLUSTRATE THAT YOU SHOULD DESIGN YOUR APP SO THAT
