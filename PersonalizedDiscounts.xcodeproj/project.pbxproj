@@ -39,6 +39,7 @@
 		B87FA7C516410253001CCB8F /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B87FA7C316410253001CCB8F /* LoginViewController.m */; };
 		B87FA7C616410253001CCB8F /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B87FA7C416410253001CCB8F /* LoginViewController.xib */; };
 		B8C7D5CA164240D700D275D3 /* ic_launcher.png in Resources */ = {isa = PBXBuildFile; fileRef = B8C7D5C9164240D700D275D3 /* ic_launcher.png */; };
+		B8FB44D81643B2AE009B906E /* DiscountService.m in Sources */ = {isa = PBXBuildFile; fileRef = B8FB44D71643B2AE009B906E /* DiscountService.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -94,6 +95,8 @@
 		B87FA7C316410253001CCB8F /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		B87FA7C416410253001CCB8F /* LoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
 		B8C7D5C9164240D700D275D3 /* ic_launcher.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_launcher.png; sourceTree = "<group>"; };
+		B8FB44D61643B2AE009B906E /* DiscountService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DiscountService.h; sourceTree = "<group>"; };
+		B8FB44D71643B2AE009B906E /* DiscountService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DiscountService.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -187,6 +190,7 @@
 		82A165A1149907C200B8AEB4 /* PersonalizedDiscounts */ = {
 			isa = PBXGroup;
 			children = (
+				B8FB44D51643B1C6009B906E /* Services */,
 				823E732715D3F5610031AFC1 /* Activity Indicator */,
 				822B28CF149916B9001A7DD1 /* Scanner */,
 				822B28D0149916C0001A7DD1 /* Overlay */,
@@ -246,6 +250,15 @@
 				B87215C6164004AA006178EA /* MSSync.m */,
 			);
 			path = "Obj-C";
+			sourceTree = "<group>";
+		};
+		B8FB44D51643B1C6009B906E /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				B8FB44D61643B2AE009B906E /* DiscountService.h */,
+				B8FB44D71643B2AE009B906E /* DiscountService.m */,
+			);
+			name = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -330,6 +343,7 @@
 				B87215CD164004AA006178EA /* MSScannerSession.m in Sources */,
 				B87215CE164004AA006178EA /* MSSync.m in Sources */,
 				B87FA7C516410253001CCB8F /* LoginViewController.m in Sources */,
+				B8FB44D81643B2AE009B906E /* DiscountService.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -400,7 +414,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "PersonalizedDiscounts/PersonalizedDiscounts-Prefix.pch";
 				INFOPLIST_FILE = "PersonalizedDiscounts/PersonalizedDiscounts-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/PersonalizedDiscounts\"",
@@ -408,6 +422,7 @@
 				);
 				OTHER_LDFLAGS = "-lsqlite3.0";
 				PRODUCT_NAME = PersonalizedDiscounts;
+				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -422,7 +437,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "PersonalizedDiscounts/PersonalizedDiscounts-Prefix.pch";
 				INFOPLIST_FILE = "PersonalizedDiscounts/PersonalizedDiscounts-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/PersonalizedDiscounts\"",
@@ -430,6 +445,7 @@
 				);
 				OTHER_LDFLAGS = "-lsqlite3.0";
 				PRODUCT_NAME = PersonalizedDiscounts;
+				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

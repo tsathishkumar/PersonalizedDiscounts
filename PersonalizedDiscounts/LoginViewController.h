@@ -10,6 +10,13 @@
 
 @interface LoginViewController : UIViewController
 
+#if MS_SDK_REQUIREMENTS
+<MSScannerDelegate>
+#endif
+{
+    NSTimeInterval _lastSync; // timestamp of last successful sync
+}
+
 @property (retain, nonatomic) IBOutlet UIBarButtonItem *authButton;
 - (IBAction)loginPressed:(UIBarButtonItem *)sender;
 @property (retain, nonatomic) IBOutlet UIButton *scanButton;

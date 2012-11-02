@@ -25,6 +25,7 @@
 
 #import "MSDebug.h"
 #import "MSScanner.h"
+#import "DiscountService.h"
 
 /* UI settings */
 static const NSInteger kMSScanInfoMargin = 5;
@@ -262,9 +263,12 @@ static const NSInteger kMSInfoFontSize   = 14;
     int type = [result getType];
     NSString *value = [result getValue];
     NSString *resultStr;
+    //TODO make it as instance variable and handle memory dealloc
+    DiscountService *discountService = [[DiscountService alloc] init];
+    
     switch (type) {
         case MS_RESULT_TYPE_IMAGE:
-            resultStr = value;
+            resultStr = [discountService getDiscountForProduct:@"PS2" User:@"gprasant"];
             break;
             
         case MS_RESULT_TYPE_EAN8:
