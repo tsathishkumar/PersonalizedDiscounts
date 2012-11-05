@@ -319,7 +319,7 @@ static NSString *kMSAPISecret  = @"no1E8LOeJJUbK65m";
     if (![self close:&err]) {
         ms_errcode ecode = [err code];
         NSString *errStr = [NSString stringWithCString:ms_errmsg(ecode) encoding:NSUTF8StringEncoding];
-        MSDLog(@" [APP EXIT] SCANNER CLOSE ERROR: %@", errStr);
+        NSLog(@" [APP EXIT] SCANNER CLOSE ERROR: %@", errStr);
     }
 }
 
@@ -328,7 +328,7 @@ static NSString *kMSAPISecret  = @"no1E8LOeJJUbK65m";
     if (![self open:&err]) {
         ms_errcode ecode = [err code];
         NSString *errStr = [NSString stringWithCString:ms_errmsg(ecode) encoding:NSUTF8StringEncoding];
-        MSDLog(@" [APP ENTER] SCANNER OPEN ERROR: %@", errStr);
+        NSLog(@" [APP ENTER] SCANNER OPEN ERROR: %@", errStr);
     }
 }
 #endif

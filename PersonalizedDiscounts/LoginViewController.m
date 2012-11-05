@@ -207,7 +207,7 @@
 -(void)scannerWillSync:(MSScanner *)scanner {
     [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:YES];
     
-    MSDLog(@" [MOODSTOCKS SDK] WILL SYNC ");
+    NSLog(@" [MOODSTOCKS SDK] WILL SYNC ");
 }
 
 - (void)scannerDidSync:(MSScanner *)scanner {
@@ -215,7 +215,7 @@
     
     _lastSync = [[NSDate date] timeIntervalSince1970];
     
-    MSDLog(@" [MOODSTOCKS SDK] DID SYNC. DATABASE SIZE = %d IMAGE(S)", [scanner count:nil]);
+    NSLog(@" [MOODSTOCKS SDK] DID SYNC. DATABASE SIZE = %d IMAGE(S)", [scanner count:nil]);
 }
 
 - (void)scanner:(MSScanner *)scanner failedToSyncWithError:(NSError *)error {
@@ -229,7 +229,7 @@
         ms_errcode ecode = [error code];
         NSString *errStr = [NSString stringWithCString:ms_errmsg(ecode) encoding:NSUTF8StringEncoding];
         
-        MSDLog(@" [MOODSTOCKS SDK] FAILED TO SYNC WITH ERROR: %@", errStr);
+        NSLog(@" [MOODSTOCKS SDK] FAILED TO SYNC WITH ERROR: %@", errStr);
     }
 }
 #endif

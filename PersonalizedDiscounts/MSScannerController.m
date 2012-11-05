@@ -304,7 +304,7 @@ didOutputSampleBuffer:(CMSampleBufferRef)sampleBuffer
     NSError *err = nil;
     MSResult *result = [_scannerSession scan:qry options:kMSScanOptions error:&err];
     if (err != nil) {
-        MSDLog(@" [MOODSTOCKS SDK] SCAN ERROR: %@", [NSString stringWithCString:ms_errmsg([err code])
+        NSLog(@" [MOODSTOCKS SDK] SCAN ERROR: %@", [NSString stringWithCString:ms_errmsg([err code])
                                                                        encoding:NSUTF8StringEncoding]);
     }
     
@@ -420,7 +420,7 @@ didOutputSampleBuffer:(CMSampleBufferRef)sampleBuffer
     if (ecode >= 0) {
         NSString *errStr = [NSString stringWithCString:ms_errmsg(ecode) encoding:NSUTF8StringEncoding];
         
-        MSDLog(@" [MOODSTOCKS SDK] FAILED TO SEARCH WITH ERROR: %@", errStr);
+        NSLog(@" [MOODSTOCKS SDK] FAILED TO SEARCH WITH ERROR: %@", errStr);
         
         // Here you may want to inform the user that an error occurred
         // Fee free to adapt to your needs (wording, display policy, etc)

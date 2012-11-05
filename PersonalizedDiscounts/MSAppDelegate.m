@@ -95,7 +95,7 @@
                 " 1) uninstall the app from your device,\n"
                 " 2) make sure to properly configure your key/secret pair within MSScanner.m\n"
                 " 3) re-build & run\n";
-                MSDLog(@"\n\n [MOODSTOCKS SDK] SCANNER OPEN ERROR: %@", errStr);
+                NSLog(@"\n\n [MOODSTOCKS SDK] SCANNER OPEN ERROR: %@", errStr);
                 
                 // NOTE: we purposely crash the app here so that the developer detects the problem
                 [[NSException exceptionWithName:@"MSScannerException"
@@ -105,7 +105,7 @@
             }
             else {
                 NSString *errStr = [NSString stringWithCString:ms_errmsg(ecode) encoding:NSUTF8StringEncoding];
-                MSDLog(@" [MOODSTOCKS SDK] SCANNER OPEN ERROR: %@", errStr);
+                NSLog(@" [MOODSTOCKS SDK] SCANNER OPEN ERROR: %@", errStr);
             }
         }
 #endif
