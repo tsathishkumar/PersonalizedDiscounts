@@ -1,0 +1,8 @@
+PersonalizedDiscounts.xcodeproj/*.pbxuser
+PersonalizedDiscounts.xcodeproj/*.mode*
+PersonalizedDiscounts.xcodeproj/*.perspectivev3
+PersonalizedDiscounts.xcodeproj/*.xcworkspace/
+PersonalizedDiscounts.xcodeproj/xcuserdata/
+PersonalizedDiscounts.xcodeproj/**/*.xcbkptlist
+PersonalizedDiscounts.xcodeproj/**/*.xcuserstate
+PersonalizedDiscounts.xcodeproj/xcuserdata/sathish.xcuserdatad/xcdebugger/Breakpoints.xcbkptlist

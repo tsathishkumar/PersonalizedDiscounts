@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "UserService.h"
 
 @interface LoginViewController : UIViewController
 
@@ -16,10 +17,12 @@
 {
     NSTimeInterval _lastSync; // timestamp of last successful sync
 }
+@property (retain, nonatomic) IBOutlet UILabel *welcomeLabel;
 
 @property (retain, nonatomic) IBOutlet UIBarButtonItem *authButton;
 - (IBAction)loginPressed:(UIBarButtonItem *)sender;
 @property (retain, nonatomic) IBOutlet UIButton *scanButton;
 - (IBAction)scanPressed:(id)sender;
+- (void) updateView;
 
 @end

@@ -26,6 +26,7 @@
 #import "MSDebug.h"
 #import "MSScanner.h"
 #import "DiscountService.h"
+#import "UserService.h"
 
 /* UI settings */
 static const NSInteger kMSScanInfoMargin = 5;
@@ -268,7 +269,7 @@ static const NSInteger kMSInfoFontSize   = 14;
     
     switch (type) {
         case MS_RESULT_TYPE_IMAGE:
-            resultStr = [discountService getDiscountForProduct:@"PS2" User:@"gprasant"];
+            resultStr = [discountService getDiscountForProduct:value User:[[UserService sharedInstance] email]];
             break;
             
         case MS_RESULT_TYPE_EAN8:

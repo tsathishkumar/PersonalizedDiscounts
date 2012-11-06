@@ -24,6 +24,7 @@
 		82A165A8149907C200B8AEB4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 82A165A7149907C200B8AEB4 /* main.m */; };
 		82A165AC149907C200B8AEB4 /* MSAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 82A165AB149907C200B8AEB4 /* MSAppDelegate.m */; };
 		82DEE69914991D97002BA5B0 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 82DEE69814991D97002BA5B0 /* Default.png */; };
+		B853ACBC1647991700D6E74C /* UserService.m in Sources */ = {isa = PBXBuildFile; fileRef = B853ACBB1647991700D6E74C /* UserService.m */; };
 		B87215C7164004AA006178EA /* libmoodstocks-sdk.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B87215B4164004AA006178EA /* libmoodstocks-sdk.a */; };
 		B87215C8164004AA006178EA /* MSApiSearch.m in Sources */ = {isa = PBXBuildFile; fileRef = B87215B8164004AA006178EA /* MSApiSearch.m */; };
 		B87215C9164004AA006178EA /* MSAvailability.m in Sources */ = {isa = PBXBuildFile; fileRef = B87215BA164004AA006178EA /* MSAvailability.m */; };
@@ -69,6 +70,8 @@
 		82A165AA149907C200B8AEB4 /* MSAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MSAppDelegate.h; sourceTree = "<group>"; };
 		82A165AB149907C200B8AEB4 /* MSAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MSAppDelegate.m; sourceTree = "<group>"; };
 		82DEE69814991D97002BA5B0 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		B853ACBA1647991700D6E74C /* UserService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserService.h; sourceTree = "<group>"; };
+		B853ACBB1647991700D6E74C /* UserService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserService.m; sourceTree = "<group>"; };
 		B87215B4164004AA006178EA /* libmoodstocks-sdk.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libmoodstocks-sdk.a"; sourceTree = "<group>"; };
 		B87215B5164004AA006178EA /* moodstocks_sdk.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = moodstocks_sdk.h; sourceTree = "<group>"; };
 		B87215B7164004AA006178EA /* MSApiSearch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSApiSearch.h; sourceTree = "<group>"; };
@@ -257,6 +260,8 @@
 			children = (
 				B8FB44D61643B2AE009B906E /* DiscountService.h */,
 				B8FB44D71643B2AE009B906E /* DiscountService.m */,
+				B853ACBA1647991700D6E74C /* UserService.h */,
+				B853ACBB1647991700D6E74C /* UserService.m */,
 			);
 			name = Services;
 			sourceTree = "<group>";
@@ -344,6 +349,7 @@
 				B87215CE164004AA006178EA /* MSSync.m in Sources */,
 				B87FA7C516410253001CCB8F /* LoginViewController.m in Sources */,
 				B8FB44D81643B2AE009B906E /* DiscountService.m in Sources */,
+				B853ACBC1647991700D6E74C /* UserService.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
