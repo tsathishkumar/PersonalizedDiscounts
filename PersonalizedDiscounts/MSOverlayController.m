@@ -66,11 +66,10 @@ static const NSInteger kMSInfoFontSize   = 14;
 }
 
 - (void)dealloc {
-    [_actionSheet release];
-    _actionSheet = nil;
     
     [[[MSScanner sharedInstance] syncDelegates] removeObject:self];
-    
+    [self.discountSticker release];
+    [self.discountText release];
     [super dealloc];
 }
 
@@ -165,19 +164,19 @@ static const NSInteger kMSInfoFontSize   = 14;
     UIImageView *discountImageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"discount.png"]];
     self.discountSticker = discountImageView;
     [discountImageView release];
-    [discountSticker setFrame:CGRectMake(250, 30, 60, 60)];
-    [discountSticker setHidden:YES];
+    [discountSticker setFrame:CGRectMake(230, 30, 80, 80)];
+    [discountSticker setHidden:NO];
     [self.view addSubview:discountSticker];
     
     // discountText
-    UILabel *tempLabel = [[UILabel alloc] initWithFrame:CGRectMake(255, 25, 60, 60)];
+    UILabel *tempLabel = [[UILabel alloc] initWithFrame:CGRectMake(235, 25, 80, 80)];
     self.discountText = tempLabel;
     [tempLabel release];
 	[discountText setBackgroundColor:[UIColor clearColor]];
 	[discountText setFont:[UIFont fontWithName:@"Courier" size:18.0]];
 	[discountText setTextColor:[UIColor redColor]];
 	[discountText setText:@"15% off"];
-    [discountText setHidden:YES];
+    [discountText setHidden:NO];
 	[self.view addSubview:discountText];
 }
 
@@ -290,7 +289,7 @@ static const NSInteger kMSInfoFontSize   = 14;
     
     switch (type) {
         case MS_RESULT_TYPE_IMAGE:
-            resultStr = [discountService getDiscountForProduct:value User:[[UserService sharedInstance] email]];
+            resultStr = @"15% off";//[discountService getDiscountForProduct:value User:[[UserService sharedInstance] email]];
             break;
             
         case MS_RESULT_TYPE_EAN8:
@@ -310,12 +309,6 @@ static const NSInteger kMSInfoFontSize   = 14;
             break;
     }
     
-    // Retrieve and dismiss former result (if any)
-    if (_actionSheet != nil) {
-        [_actionSheet dismissWithClickedButtonIndex:-1 animated:NO];
-        [_actionSheet release];
-        _actionSheet = nil;
-    }
     
     // Present the most up-to-date result in overlay
     [self.discountSticker setHidden:NO];

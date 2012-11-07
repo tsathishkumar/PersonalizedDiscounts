@@ -33,7 +33,6 @@
 #endif
 > {
     MSScannerController *_scanner; // parent scanner
-    UIActionSheet *_actionSheet; // current overlay element
 }
 
 @property (nonatomic, assign) BOOL decodeEAN_8;
