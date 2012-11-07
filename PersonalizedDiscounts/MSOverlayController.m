@@ -66,11 +66,10 @@ static const NSInteger kMSInfoFontSize   = 14;
 }
 
 - (void)dealloc {
-    [_actionSheet release];
-    _actionSheet = nil;
     
     [[[MSScanner sharedInstance] syncDelegates] removeObject:self];
-    
+    [self.discountSticker release];
+    [self.discountText release];
     [super dealloc];
 }
 
@@ -165,12 +164,12 @@ static const NSInteger kMSInfoFontSize   = 14;
     UIImageView *discountImageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"discount.png"]];
     self.discountSticker = discountImageView;
     [discountImageView release];
-    [discountSticker setFrame:CGRectMake(250, 30, 60, 60)];
+    [discountSticker setFrame:CGRectMake(230, 30, 80, 80)];
     [discountSticker setHidden:YES];
     [self.view addSubview:discountSticker];
     
     // discountText
-    UILabel *tempLabel = [[UILabel alloc] initWithFrame:CGRectMake(255, 25, 60, 60)];
+    UILabel *tempLabel = [[UILabel alloc] initWithFrame:CGRectMake(235, 25, 80, 80)];
     self.discountText = tempLabel;
     [tempLabel release];
 	[discountText setBackgroundColor:[UIColor clearColor]];
@@ -310,12 +309,6 @@ static const NSInteger kMSInfoFontSize   = 14;
             break;
     }
     
-    // Retrieve and dismiss former result (if any)
-    if (_actionSheet != nil) {
-        [_actionSheet dismissWithClickedButtonIndex:-1 animated:NO];
-        [_actionSheet release];
-        _actionSheet = nil;
-    }
     
     // Present the most up-to-date result in overlay
     [self.discountSticker setHidden:NO];
