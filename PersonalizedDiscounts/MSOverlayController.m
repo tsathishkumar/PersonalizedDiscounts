@@ -165,7 +165,7 @@ static const NSInteger kMSInfoFontSize   = 14;
     self.discountSticker = discountImageView;
     [discountImageView release];
     [discountSticker setFrame:CGRectMake(230, 30, 80, 80)];
-    [discountSticker setHidden:NO];
+    [discountSticker setHidden:YES];
     [self.view addSubview:discountSticker];
     
     // discountText
