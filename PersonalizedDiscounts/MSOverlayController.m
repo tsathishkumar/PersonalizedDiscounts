@@ -49,6 +49,9 @@ static const NSInteger kMSInfoFontSize   = 14;
 @synthesize decodeEAN_13;
 @synthesize decodeQRCode;
 
+@synthesize discountSticker;
+@synthesize discountText;
+
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
@@ -158,6 +161,24 @@ static const NSInteger kMSInfoFontSize   = 14;
     if (![scanner isSyncing]) [self updateCacheCount:[scanner count:nil]];
     else [self updateCache:@"syncing..."];
 #endif
+    //display yellow sticker image
+    UIImageView *discountImageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"discount.png"]];
+    self.discountSticker = discountImageView;
+    [discountImageView release];
+    [discountSticker setFrame:CGRectMake(250, 30, 60, 60)];
+    [discountSticker setHidden:YES];
+    [self.view addSubview:discountSticker];
+    
+    // discountText
+    UILabel *tempLabel = [[UILabel alloc] initWithFrame:CGRectMake(255, 25, 60, 60)];
+    self.discountText = tempLabel;
+    [tempLabel release];
+	[discountText setBackgroundColor:[UIColor clearColor]];
+	[discountText setFont:[UIFont fontWithName:@"Courier" size:18.0]];
+	[discountText setTextColor:[UIColor redColor]];
+	[discountText setText:@"15% off"];
+    [discountText setHidden:YES];
+	[self.view addSubview:discountText];
 }
 
 - (void)viewDidUnload {
@@ -297,17 +318,8 @@ static const NSInteger kMSInfoFontSize   = 14;
     }
     
     // Present the most up-to-date result in overlay
-    //
-    // NOTE: this is a very basic way to display some information / action in overlay
-    //       You can think of it as an "hello world". In a real application you may want
-    //       to introduce your own UI elements and animations according to your needs
-    _actionSheet = [[UIActionSheet alloc] initWithTitle:resultStr
-                                               delegate:self
-                                      cancelButtonTitle:@"OK"
-                                 destructiveButtonTitle:nil
-                                      otherButtonTitles:nil];
-    _actionSheet.actionSheetStyle = UIActionSheetStyleBlackTranslucent;
-    [_actionSheet showInView:self.view];
+    [self.discountSticker setHidden:NO];
+    [self.discountText setHidden:NO];
 }
 
 - (void)scanner:(MSScannerController *)scanner stateUpdated:(NSDictionary *)state {
@@ -334,6 +346,19 @@ static const NSInteger kMSInfoFontSize   = 14;
         // Tell the scanner to start scanning again
         [_scanner resume];
     }
+}
+
+-(void) displayDiscount:(NSString *)message{
+    UILabel *tempLabel = [[UILabel alloc] initWithFrame:CGRectMake(100, 50, 120, 30)];
+
+	[tempLabel setBackgroundColor:[UIColor clearColor]];
+	[tempLabel setFont:[UIFont fontWithName:@"Courier" size: 18.0]];
+	[tempLabel setTextColor:[UIColor redColor]];
+	[tempLabel setText:message];
+    [tempLabel setHidden:YES];
+	
+    [self.view addSubview:tempLabel];
+    [tempLabel release];
 }
 
 #pragma mark - MSScannerDelegate

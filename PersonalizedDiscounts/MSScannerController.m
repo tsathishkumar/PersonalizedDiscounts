@@ -448,6 +448,7 @@ didOutputSampleBuffer:(CMSampleBufferRef)sampleBuffer
 }
 #endif
 
+
 #pragma mark - MSActivityViewDelegate
 
 - (void)activityViewDidCancel:(MSActivityView *)view {

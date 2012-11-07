@@ -40,4 +40,7 @@
 @property (nonatomic, assign) BOOL decodeEAN_13;
 @property (nonatomic, assign) BOOL decodeQRCode;
 
+@property (nonatomic, retain) UILabel *discountText;
+@property (nonatomic, retain) UIImageView *discountSticker;
+
 @end

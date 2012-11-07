@@ -24,6 +24,7 @@
 		82A165A8149907C200B8AEB4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 82A165A7149907C200B8AEB4 /* main.m */; };
 		82A165AC149907C200B8AEB4 /* MSAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 82A165AB149907C200B8AEB4 /* MSAppDelegate.m */; };
 		82DEE69914991D97002BA5B0 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 82DEE69814991D97002BA5B0 /* Default.png */; };
+		84FCF7BB164A1FBD00756B64 /* discount.png in Resources */ = {isa = PBXBuildFile; fileRef = 84FCF7BA164A1FBD00756B64 /* discount.png */; };
 		B853ACBC1647991700D6E74C /* UserService.m in Sources */ = {isa = PBXBuildFile; fileRef = B853ACBB1647991700D6E74C /* UserService.m */; };
 		B87215C7164004AA006178EA /* libmoodstocks-sdk.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B87215B4164004AA006178EA /* libmoodstocks-sdk.a */; };
 		B87215C8164004AA006178EA /* MSApiSearch.m in Sources */ = {isa = PBXBuildFile; fileRef = B87215B8164004AA006178EA /* MSApiSearch.m */; };
@@ -70,6 +71,7 @@
 		82A165AA149907C200B8AEB4 /* MSAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MSAppDelegate.h; sourceTree = "<group>"; };
 		82A165AB149907C200B8AEB4 /* MSAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MSAppDelegate.m; sourceTree = "<group>"; };
 		82DEE69814991D97002BA5B0 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		84FCF7BA164A1FBD00756B64 /* discount.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = discount.png; sourceTree = "<group>"; };
 		B853ACBA1647991700D6E74C /* UserService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserService.h; sourceTree = "<group>"; };
 		B853ACBB1647991700D6E74C /* UserService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserService.m; sourceTree = "<group>"; };
 		B87215B4164004AA006178EA /* libmoodstocks-sdk.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libmoodstocks-sdk.a"; sourceTree = "<group>"; };
@@ -210,6 +212,7 @@
 		82A165A2149907C200B8AEB4 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				84FCF7B8164A1E3600756B64 /* Images */,
 				823E732315D3F55B0031AFC1 /* cancel.png */,
 				823E732415D3F55B0031AFC1 /* cancel@2x.png */,
 				826A832B160B781B00960B94 /* Default-568h@2x.png */,
@@ -220,6 +223,14 @@
 				82A165A9149907C200B8AEB4 /* PersonalizedDiscounts-Prefix.pch */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		84FCF7B8164A1E3600756B64 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				84FCF7BA164A1FBD00756B64 /* discount.png */,
+			);
+			name = Images;
 			sourceTree = "<group>";
 		};
 		B87215B216400488006178EA /* MoodstocksSDK */ = {
@@ -325,6 +336,7 @@
 				B87FA7A9164020E4001CCB8F /* FacebookSDKResources.bundle in Resources */,
 				B87FA7C616410253001CCB8F /* LoginViewController.xib in Resources */,
 				B8C7D5CA164240D700D275D3 /* ic_launcher.png in Resources */,
+				84FCF7BB164A1FBD00756B64 /* discount.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
