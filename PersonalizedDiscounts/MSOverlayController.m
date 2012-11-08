@@ -68,8 +68,6 @@ static const NSInteger kMSInfoFontSize   = 14;
 - (void)dealloc {
     
     [[[MSScanner sharedInstance] syncDelegates] removeObject:self];
-    [self.discountSticker release];
-    [self.discountText release];
     [super dealloc];
 }
 
@@ -161,17 +159,13 @@ static const NSInteger kMSInfoFontSize   = 14;
     else [self updateCache:@"syncing..."];
 #endif
     //display yellow sticker image
-    UIImageView *discountImageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"discount.png"]];
-    self.discountSticker = discountImageView;
-    [discountImageView release];
+    self.discountSticker = [[[UIImageView alloc] initWithImage:[UIImage imageNamed:@"discount.png"]] autorelease];
     [discountSticker setFrame:CGRectMake(230, 30, 80, 80)];
-    [discountSticker setHidden:YES];
+    [discountSticker setHidden:NO];
     [self.view addSubview:discountSticker];
     
     // discountText
-    UILabel *tempLabel = [[UILabel alloc] initWithFrame:CGRectMake(235, 25, 80, 80)];
-    self.discountText = tempLabel;
-    [tempLabel release];
+    self.discountText = [[[UILabel alloc] initWithFrame:CGRectMake(235, 25, 80, 80)] autorelease];
 	[discountText setBackgroundColor:[UIColor clearColor]];
 	[discountText setFont:[UIFont fontWithName:@"Courier" size:18.0]];
 	[discountText setTextColor:[UIColor redColor]];
@@ -339,19 +333,6 @@ static const NSInteger kMSInfoFontSize   = 14;
         // Tell the scanner to start scanning again
         [_scanner resume];
     }
-}
-
--(void) displayDiscount:(NSString *)message{
-    UILabel *tempLabel = [[UILabel alloc] initWithFrame:CGRectMake(100, 50, 120, 30)];
-
-	[tempLabel setBackgroundColor:[UIColor clearColor]];
-	[tempLabel setFont:[UIFont fontWithName:@"Courier" size: 18.0]];
-	[tempLabel setTextColor:[UIColor redColor]];
-	[tempLabel setText:message];
-    [tempLabel setHidden:YES];
-	
-    [self.view addSubview:tempLabel];
-    [tempLabel release];
 }
 
 #pragma mark - MSScannerDelegate
