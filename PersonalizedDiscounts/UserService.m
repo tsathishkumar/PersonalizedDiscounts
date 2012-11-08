@@ -13,10 +13,10 @@
 
 static UserService *service = nil;
 MSAppDelegate *appDelegate;
-@synthesize email=_email;
-@synthesize username=_username;
-@synthesize firstname=_firstname;
-@synthesize lastname=_lastname;
+@synthesize email;
+@synthesize username;
+@synthesize firstname;
+@synthesize lastname;
 
 +(UserService *)sharedInstance{
     if(!service){
@@ -75,11 +75,15 @@ MSAppDelegate *appDelegate;
                                                                                                           id result,
                                                                                                           NSError *error) {
         NSDictionary *my = (NSDictionary*) result;
-        NSLog(@"my email: %@",[my description]);
-        _email = [my objectForKey:@"email"];
-        _username = [my objectForKey:@"username"];
-        _firstname = [my objectForKey:@"first_name"];
-        _lastname = [my objectForKey:@"last_name"];
+        NSLog(@"json: %@",[my description]);
+        self.email = [my objectForKey:@"email"];
+        NSLog(@"email: %@",self.email);
+        self.username = [my objectForKey:@"username"];
+        NSLog(@"username: %@",self.username);
+        self.firstname = [my objectForKey:@"first_name"];
+        NSLog(@"firstname: %@",self.firstname);
+        self.lastname = [my objectForKey:@"last_name"];
+        NSLog(@"lastname: %@",self.lastname);
         [hostController updateView];
     }];
 }

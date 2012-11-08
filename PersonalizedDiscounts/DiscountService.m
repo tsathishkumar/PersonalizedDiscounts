@@ -34,7 +34,6 @@ static DiscountService *service = nil;
     NSError *error;
     NSString *data = [NSString stringWithContentsOfURL:url encoding:NSUTF8StringEncoding error:&error];
     NSDictionary *result = [self getDictionaryFromJsonString:data];
-    NSLog(@"%@", [result objectForKey:@"Off"]);
     return [result objectForKey:@"Off"];
 }
 
