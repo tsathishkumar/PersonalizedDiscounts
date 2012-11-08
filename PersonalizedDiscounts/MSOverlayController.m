@@ -161,7 +161,7 @@ static const NSInteger kMSInfoFontSize   = 14;
     //display yellow sticker image
     self.discountSticker = [[[UIImageView alloc] initWithImage:[UIImage imageNamed:@"discount.png"]] autorelease];
     [discountSticker setFrame:CGRectMake(230, 30, 80, 80)];
-    [discountSticker setHidden:NO];
+    [discountSticker setHidden:YES];
     [self.view addSubview:discountSticker];
     
     // discountText
@@ -170,7 +170,7 @@ static const NSInteger kMSInfoFontSize   = 14;
 	[discountText setFont:[UIFont fontWithName:@"Courier" size:18.0]];
 	[discountText setTextColor:[UIColor redColor]];
 	[discountText setText:@"15% off"];
-    [discountText setHidden:NO];
+    [discountText setHidden:YES];
 	[self.view addSubview:discountText];
 }
 
