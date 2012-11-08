@@ -283,7 +283,7 @@ static const NSInteger kMSInfoFontSize   = 14;
     
     switch (type) {
         case MS_RESULT_TYPE_IMAGE:
-            resultStr = @"15% off";//[discountService getDiscountForProduct:value User:[[UserService sharedInstance] email]];
+            resultStr = [NSString stringWithFormat:@"%d\% off",[[discountService getDiscountForProduct:value User:[[UserService sharedInstance] email]]]];
             break;
             
         case MS_RESULT_TYPE_EAN8:
@@ -325,6 +325,7 @@ static const NSInteger kMSInfoFontSize   = 14;
         [self updateQRCode];
     }
 }
+
 
 #pragma mark - UIActionSheetDelegate
 
