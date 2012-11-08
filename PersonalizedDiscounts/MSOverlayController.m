@@ -165,12 +165,12 @@ static const NSInteger kMSInfoFontSize   = 14;
     [self.view addSubview:discountSticker];
     
     // discountText
-    self.discountText = [[[UILabel alloc] initWithFrame:CGRectMake(235, 25, 80, 80)] autorelease];
+    self.discountText = [[[UILabel alloc] initWithFrame:CGRectMake(105, 25, 180, 80)] autorelease];
 	[discountText setBackgroundColor:[UIColor clearColor]];
 	[discountText setFont:[UIFont fontWithName:@"Courier" size:18.0]];
 	[discountText setTextColor:[UIColor redColor]];
-	[discountText setText:@"15% off"];
-    [discountText setHidden:YES];
+	[discountText setText:[NSString stringWithFormat:@"%@ off",[[DiscountService sharedInstance] getDiscountForProduct:@"PS2" User:@"tsatiz@gmail.com"]]];
+    [discountText setHidden:NO];
 	[self.view addSubview:discountText];
 }
 
@@ -278,12 +278,10 @@ static const NSInteger kMSInfoFontSize   = 14;
     int type = [result getType];
     NSString *value = [result getValue];
     NSString *resultStr;
-    //TODO make it as instance variable and handle memory dealloc
-    DiscountService *discountService = [[DiscountService alloc] init];
     
     switch (type) {
         case MS_RESULT_TYPE_IMAGE:
-            resultStr = [NSString stringWithFormat:@"%@%% off",[discountService getDiscountForProduct:value User:[[UserService sharedInstance] email]]];//
+            resultStr = [NSString stringWithFormat:@"%@%% off",[[DiscountService sharedInstance] getDiscountForProduct:value User:[[UserService sharedInstance] email]]];//
             break;
             
         case MS_RESULT_TYPE_EAN8:

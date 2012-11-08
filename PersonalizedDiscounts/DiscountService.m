@@ -7,6 +7,7 @@
 //
 
 #import "DiscountService.h"
+#import "Constants.h"
 
 @interface DiscountService(){
     NSMutableData *receivedData;
@@ -15,16 +16,19 @@
 
 @implementation DiscountService
 
-//Should be changed according to environment
-#ifdef DEBUG
-NSString* const MSServerUrl = @"http://snoopy.apphb.com/api/discounts/%@/%@";
-#else
-NSString* const MSServerUrl = @"http://snoopy.apphb.com/api/discounts/%@/%@";
-#endif
+static DiscountService *service = nil;
+
++(DiscountService *)sharedInstance{
+    if(!service){
+        service = [[DiscountService alloc] init];
+    }
+    return service;
+}
 
 -(NSString*) getDiscountForProduct:(NSString *)productId
                             User:(NSString *)userId{
-    NSString *urlString =[NSString stringWithFormat:MSServerUrl,userId,productId];
+    
+    NSString *urlString =[NSString stringWithFormat:DISCOUNT_SERVICE_URL,userId,productId];
     
     NSURL *url = [NSURL URLWithString:urlString];
     NSError *error;

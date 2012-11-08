@@ -72,6 +72,7 @@
 		82A165AB149907C200B8AEB4 /* MSAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MSAppDelegate.m; sourceTree = "<group>"; };
 		82DEE69814991D97002BA5B0 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		84FCF7BA164A1FBD00756B64 /* discount.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = discount.png; sourceTree = "<group>"; };
+		B84FD91B164BA27500C2C795 /* Constants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
 		B853ACBA1647991700D6E74C /* UserService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserService.h; sourceTree = "<group>"; };
 		B853ACBB1647991700D6E74C /* UserService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserService.m; sourceTree = "<group>"; };
 		B87215B4164004AA006178EA /* libmoodstocks-sdk.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libmoodstocks-sdk.a"; sourceTree = "<group>"; };
@@ -156,6 +157,7 @@
 		82A1658C149907C100B8AEB4 = {
 			isa = PBXGroup;
 			children = (
+				B84FD91B164BA27500C2C795 /* Constants.h */,
 				B8C7D5C9164240D700D275D3 /* ic_launcher.png */,
 				B87215B216400488006178EA /* MoodstocksSDK */,
 				82A165A1149907C200B8AEB4 /* PersonalizedDiscounts */,
@@ -431,6 +433,10 @@
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "PersonalizedDiscounts/PersonalizedDiscounts-Prefix.pch";
+				"GCC_PREPROCESSOR_DEFINITIONS[arch=*]" = (
+					"DEBUG=1",
+					"DEVELOPMENT=1",
+				);
 				INFOPLIST_FILE = "PersonalizedDiscounts/PersonalizedDiscounts-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				LIBRARY_SEARCH_PATHS = (
@@ -454,6 +460,7 @@
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "PersonalizedDiscounts/PersonalizedDiscounts-Prefix.pch";
+				"GCC_PREPROCESSOR_DEFINITIONS[arch=*]" = "PRODUCTION=1";
 				INFOPLIST_FILE = "PersonalizedDiscounts/PersonalizedDiscounts-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				LIBRARY_SEARCH_PATHS = (

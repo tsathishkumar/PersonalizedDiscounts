@@ -12,4 +12,5 @@
 
 -(NSString*) getDiscountForProduct:(NSString *)productId
                             User:(NSString *)userId;
++(DiscountService*)sharedInstance;
 @end
