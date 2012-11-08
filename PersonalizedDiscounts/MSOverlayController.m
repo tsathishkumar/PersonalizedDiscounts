@@ -282,7 +282,11 @@ static const NSInteger kMSInfoFontSize   = 14;
     
     switch (type) {
         case MS_RESULT_TYPE_IMAGE:
-            resultStr = [NSString stringWithFormat:@"%@%% off",[[DiscountService sharedInstance] getDiscountForProduct:value User:[[UserService sharedInstance] email]]];//
+            resultStr = [NSString stringWithFormat:@"%@ off",[[DiscountService sharedInstance] getDiscountForProduct:value User:[[UserService sharedInstance] email]]];
+            [self.discountText setText:resultStr];
+            // Present the most up-to-date result in overlay
+            [self.discountSticker setHidden:NO];
+            [self.discountText setHidden:NO];
             break;
             
         case MS_RESULT_TYPE_EAN8:
@@ -303,9 +307,6 @@ static const NSInteger kMSInfoFontSize   = 14;
     }
     
     
-    // Present the most up-to-date result in overlay
-    [self.discountSticker setHidden:NO];
-    [self.discountText setHidden:NO];
 }
 
 - (void)scanner:(MSScannerController *)scanner stateUpdated:(NSDictionary *)state {
