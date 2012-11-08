@@ -287,6 +287,8 @@ static const NSInteger kMSInfoFontSize   = 14;
             // Present the most up-to-date result in overlay
             [self.discountSticker setHidden:NO];
             [self.discountText setHidden:NO];
+            [self performSelector:@selector(hideLabelAndImage) withObject:nil afterDelay:3 ];
+            
             break;
             
         case MS_RESULT_TYPE_EAN8:
@@ -325,6 +327,12 @@ static const NSInteger kMSInfoFontSize   = 14;
         [self updateQRCode];
     }
 }
+
+- (void) hideLabelAndImage{
+    [self.discountText setHidden:YES];
+    [self.discountSticker setHidden:YES];
+}
+
 
 
 #pragma mark - UIActionSheetDelegate
