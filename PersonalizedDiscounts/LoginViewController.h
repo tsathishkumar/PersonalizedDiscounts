@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "UserService.h"
+#import "AK.h"
 
 @interface LoginViewController : UIViewController
 
@@ -16,12 +17,20 @@
 #endif
 {
     NSTimeInterval _lastSync; // timestamp of last successful sync
-}
-@property (retain, nonatomic) IBOutlet UILabel *welcomeLabel;
+    UIButton *launchButton;
+    AKViewController *aurasmaController;
+    NSTimer *splashTimer;
+    BOOL hasBeenPresented;
 
+}
+@property (nonatomic, retain) IBOutlet UIButton *launchButton;
+@property (retain, nonatomic) IBOutlet UILabel *welcomeLabel;
 @property (retain, nonatomic) IBOutlet UIBarButtonItem *authButton;
-- (IBAction)loginPressed:(UIBarButtonItem *)sender;
 @property (retain, nonatomic) IBOutlet UIButton *scanButton;
+@property (nonatomic, retain) AKViewController *aurasmaController;
+
+- (IBAction)loginPressed:(UIBarButtonItem *)sender;
+- (IBAction)launchPressed:(id)sender;
 - (IBAction)scanPressed:(id)sender;
 - (void) updateView;
 

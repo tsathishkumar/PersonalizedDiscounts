@@ -18,14 +18,26 @@
 #import "MSAppDelegate.h"
 #import "MSScannerController.h"
 #import "DiscountService.h"
+#import "AKOverlayViewController.h"
 
 @interface LoginViewController ()
 
 - (void)updateView;
 
+@property (nonatomic, retain) NSTimer *splashTimer;
+
+- (void)showSplash;
+- (void)createAurasmaController;
+- (void)launchAurasmaShowingCloseButton:(BOOL)showCloseButton animated:(BOOL)animated;
+
 @end
 
 @implementation LoginViewController
+
+@synthesize aurasmaController;
+@synthesize launchButton;
+@synthesize splashTimer;
+
 
 @synthesize authButton = _authButton;
 
@@ -82,11 +94,13 @@
         // valid account UI is shown whenever the session is open
         [self.authButton setTitle:@"Log Out"];
         [self.scanButton setHidden:NO];
+        [self.launchButton setHidden:NO];
     } else {
         // login-needed account UI is shown whenever the session is closed
         [self.welcomeLabel setText:@"Please login to use the app"];
         [self.authButton setTitle:@"Log In"];
         [self.scanButton setHidden:YES];
+        [self.launchButton setHidden:YES];
     }
 }
 
@@ -131,6 +145,134 @@
 }
 
 - (IBAction)scanPressed:(id)sender {
+}
+
+- (void)showSplash
+{
+    CGRect splashFrame = [self.view convertRect:[[UIScreen mainScreen] applicationFrame] fromView:nil];
+    
+    UIImageView *splashView = [[[UIImageView alloc] initWithFrame:splashFrame] autorelease];
+    
+    if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)
+        splashView.image = [UIImage imageNamed:@"Default~ipad"];
+    else
+        splashView.image = [UIImage imageNamed:@"Default"];
+    
+    splashView.tag = 1;
+    [self.view addSubview:splashView];
+    
+    // Show splash for 2 seconds, or until we've finished unpacking resources (whichever is longer)
+    self.splashTimer = [NSTimer scheduledTimerWithTimeInterval:2.0 target:self selector:@selector(splashFinished:) userInfo:nil repeats:NO];
+}
+
+- (void)splashFinished:(NSTimer*)timer
+{
+    self.splashTimer = nil;
+    
+#if START_IMMEDIATELY
+    // Show the AKViewController if it has finished loading
+    if([self.aurasmaController isLoaded])
+        [self launchAurasmaShowingCloseButton:NO animated:NO];
+#else
+    UIView *splashView = [self.view viewWithTag:1];
+    
+    [UIView animateWithDuration:0.25
+                     animations:^{
+                         splashView.alpha = 0.0;
+                     }
+                     completion: ^(BOOL finished){
+                         [splashView removeFromSuperview];
+                         [[UIApplication sharedApplication] setStatusBarHidden:NO];
+                         
+                     }];
+#endif
+}
+
+- (void)createAurasmaController
+{
+    if( !self.aurasmaController )
+    {
+        self.aurasmaController = [AKViewController aurasmaViewControllerWithDelegate:self];
+        
+        
+        //        [self.aurasmaController addButtonWithTarget:self
+        //                                             action:@selector(buttonPressed:)
+        //                                              image:[UIImage imageNamed:@"test.png"]
+        //                                      selectedImage:[UIImage imageNamed:@"test_sel.png"]];
+        
+    }
+}
+
+- (void)launchAurasmaShowingCloseButton:(BOOL)showCloseButton animated:(BOOL)animated
+{
+    [self createAurasmaController];
+    
+    if (self.aurasmaController)
+    {
+        self.aurasmaController.showsCloseButton = showCloseButton;
+        self.aurasmaController.delayGuide = YES;
+        [self presentModalViewController:self.aurasmaController animated:animated];
+    }
+    else
+        [[[[UIAlertView alloc] initWithTitle:@"Alert"
+                                     message:@"AurasmaKit not supported on this architecture"
+                                    delegate:nil
+                           cancelButtonTitle:@"OK"
+                           otherButtonTitles:nil] autorelease] show];
+}
+
+#pragma mark -
+#pragma mark Manual Launch
+- (IBAction)launchPressed:(id)sender
+{
+    [self launchAurasmaShowingCloseButton:YES animated:YES];
+}
+
+#pragma mark -
+#pragma mark AKViewControllerDelegate
+
+- (void)aurasmaViewControllerDidClose:(AKViewController*)aurasmaViewController
+{
+    self.aurasmaController.delegate = nil;
+    self.aurasmaController = nil;
+    
+    [self dismissModalViewControllerAnimated:YES];
+}
+
+- (void)aurasmaViewControllerDidFinishLoading:(AKViewController*)aurasmaViewController
+{
+    // Show the AKViewController if we've finished showing the splash
+    if(!splashTimer)
+        [self launchAurasmaShowingCloseButton:NO animated:NO];
+    
+}
+
+- (void) aurasmaViewController:(AKViewController*)aurasmaViewController didLoadOverlayView:(UIView*)overlayView
+{
+    //    UIButton *button = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+    //
+    //    button.frame  = CGRectMake(0., 0., 150.0, overlayView.bounds.size.height);
+    //    [button setTitle: @"Press me!" forState:UIControlStateNormal];
+    //
+    //    [button addTarget:self action:@selector(buttonPressed:) forControlEvents:UIControlEventTouchUpInside];
+    //
+    //    [overlayView addSubview:button];
+}
+
+#pragma mark -
+#pragma mark OverlayViewController
+
+- (void)buttonPressed: (id)sender
+{
+    AKOverlayViewController *overlayController = [[[AKOverlayViewController alloc] initWithNibName:@"AKOverlayViewController" bundle:nil] autorelease];
+    overlayController.delegate = self;
+    
+    [self.aurasmaController presentOverlayViewController:overlayController animated:YES];
+}
+
+- (void)overlayViewControllerDidFinish:(AKOverlayViewController*)controller
+{
+    [self.aurasmaController dismissOverlayViewControllerAnimated:YES];
 }
 
 // -------------------------------------------------
