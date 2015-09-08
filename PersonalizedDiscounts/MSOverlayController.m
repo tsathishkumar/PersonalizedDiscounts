@@ -169,7 +169,7 @@ static const NSInteger kMSInfoFontSize   = 14;
 	[discountText setBackgroundColor:[UIColor clearColor]];
 	[discountText setFont:[UIFont fontWithName:@"Courier" size:18.0]];
 	[discountText setTextColor:[UIColor redColor]];
-//	[discountText setText:[NSString stringWithFormat:@"%@ off",[[DiscountService sharedInstance] getDiscountForProduct:@"PS2" User:@"tsatiz@gmail.com"]]];
+//	[discountText setText:[NSString stringWithFormat:@"%@ off",[[DiscountService sharedInstance] getDiscountForProduct:@"PS2" User:@"someone@gmail.com"]]];
 //    NSLog(@"email address %@",[[UserService sharedInstance] email]);
     [discountText setHidden:YES];
 	[self.view addSubview:discountText];
